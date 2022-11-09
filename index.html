@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="container" id="container">
+      <div class="left-side">
+        <!-- FOR CIRCLE GRAPHICS -->
+        <div class="two-circles">
+          <div class="big-circle"></div>
+          <div class="small-circle"></div>
+        </div>
+
+        <div class="cardNoDisplay" id="cardNoDisplay">0000 0000 0000 0000</div>
+
+        <div class="cardDetailsDisplay">
+          <div id="nameDisplay">Jane Appleseed</div>
+          <div id="cardExpDateDisplay">00/00</div>
+        </div>
+
+        <div class="card-back" id="cardCvcDisplay">000</div>
+      </div>
+
+      <div class="right-side">
+        <form action="#" name="loginForm" class="login-form" id="loginForm">
+          <label for="full-name">Cardholder Name</label>
+          <br />
+          <input
+            type="text"
+            name="full-name"
+            id="fullName"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <br />
+          <small id="fNameError">Can't be blank</small>
+
+          <label for="card-no">Card Number</label>
+          <br />
+          <input
+            type="text"
+            name="card-no"
+            id="cardNo"
+            placeholder="e.g. 1234 5678 9123 0000"
+            size="16"
+            minlength="16"
+            maxlength="16"
+          />
+          <br />
+          <small id="cardNoError">Wrong format, numbers only</small>
+
+          <div class="card-details">
+            <div class="exp-dates-side">
+              <div>
+                <label for="exp-date">Exp. Date (MM/YY)</label>
+              </div>
+              <div class="exp-date">
+                <input
+                  type="text"
+                  name="exp-date"
+                  id="expMm"
+                  placeholder="MM"
+                  size="2"
+                  minlength="2"
+                  maxlength="2"
+                />
+                <input
+                  type="text"
+                  name="exp-date"
+                  id="expYy"
+                  placeholder="YY"
+                  size="2"
+                  minlength="2"
+                  maxlength="2"
+                />
+              </div>
+              <small id="expDateError">Can't be blank</small>
+            </div>
+
+            <div class="cvc-side">
+              <div>
+                <label for="cvc">cvc</label>
+                <input
+                  type="text"
+                  name="cvc"
+                  id="cvc"
+                  placeholder="e.g. 123"
+                  size="3"
+                  minlength="3"
+                  maxlength="3"
+                />
+              </div>
+              <small id="cvcError">Can't be blank</small>
+            </div>
+          </div>
+          <a href="#" class="btn" id="confirmBtn" target="">Confirm</a>
+        </form>
+
+        <!-- Completed state start -->
+        <div class="complete-status" id="completeStatus">
+          <div>
+            <img src="./images/icon-complete.svg" alt="complete icon" />
+          </div>
+          <div>
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+            <button
+              type="submit"
+              class="btn"
+              id="continueBtn"
+              onclick=" window.location.reload();"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/OsEm-22" target="_blank">OsEm-22</a>.
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
